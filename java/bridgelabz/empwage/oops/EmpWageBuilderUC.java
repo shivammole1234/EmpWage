@@ -2,17 +2,15 @@ package bridgelabz.empwage.oops;
 
 public class EmpWageBuilderUC {
 
-    //constat
-    public static final int is_full_time=2;
-    public static final int is_part_time=1;
-    public static final int emp_Rate_per_hour=20;
-    public static  final  int num_of_working_days=20;
-    public static final int max_working_hr_month=100;
 
 
-    public  static void main(String[] args){
-
-
+    public static void calculate_total_wage(){
+        //constat
+         final int is_full_time=2;
+         final int is_part_time=1;
+        final int emp_Rate_per_hour=20;
+          final  int num_of_working_days=20;
+         final int max_working_hr_month=100;
 
         //varibales
         int emp_hrs=0;
@@ -45,5 +43,9 @@ public class EmpWageBuilderUC {
 
         System.out.println("total Emp Wage is :-"+total_emp_wage);
 
+    }
+
+    public  static void main(String[] args){
+        calculate_total_wage();
     }
 }
