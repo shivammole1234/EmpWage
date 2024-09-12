@@ -7,6 +7,7 @@ public class EmpWageBuilderUC {
 
             final int is_full_time = 2;
             final int is_part_time = 1;
+
             int total_emp_wage = 0;
             int total_emp_hr = 0;
             int total_working_days=0;

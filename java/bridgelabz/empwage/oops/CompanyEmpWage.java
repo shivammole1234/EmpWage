@@ -1,8 +1,9 @@
 package bridgelabz.empwage.oops;
 
-public class EmpWageBuilderForEachCompany {
+public class CompanyEmpWage   {
   final int is_part_time=1;
   final int is_full_time=2;
+
   final String company_name;
   final int max_working_days;
   final int max_working_hrs;
@@ -11,7 +12,7 @@ public class EmpWageBuilderForEachCompany {
   int working_hrs;
   int working_day;
   int total_working_hr;
-  EmpWageBuilderForEachCompany
+    CompanyEmpWage
           (String company_name,int wage_per_hr,int max_working_days,int max_working_hrs)
   {
       this.company_name=company_name;
@@ -22,10 +23,19 @@ public class EmpWageBuilderForEachCompany {
       working_hrs=0;
       working_day=0;
       total_working_hr=0;
-
+      calculate_total_wage();
+      display_company_wage_details();
   }
 
-  void calculate_total_wage(){
+    private void display_company_wage_details() {
+        System.out.println("printing the details of company");
+        System.out.println("Company Name :-"+company_name+ "\n Max Working Days :- "
+                +working_day+"\n Max Working hour:- "+max_working_hrs+
+                " \n Wage per Hour:- "+wage_per_hr+" " +"\ntotal working hours:-" +total_working_hr+" \n Total wage of employee :- "
+                +total_wage);
+    }
+
+    void calculate_total_wage(){
       System.out.println("calculating the eamployee wage for the specific comoany");
 
       while (total_working_hr<max_working_hrs && working_day<max_working_days)
@@ -48,19 +58,8 @@ public class EmpWageBuilderForEachCompany {
           total_wage+=wage;
           total_working_hr+=working_hrs;
 
-
       }
-      System.out.println("printing the details of company");
-      System.out.println("Company Name :-"+company_name+ "\n Max Working Days :- "
-              +working_day+"\n Max Working hour:- "+max_working_hrs+
-              " \n Wage per Hour:- "+wage_per_hr+" " +"\ntotal working hours:-" +total_working_hr+" \n Total wage of employee :- "
-              +total_wage);
+
   }
 
-    public static void main(String[] args) {
-    EmpWageBuilderForEachCompany amazon=
-            new EmpWageBuilderForEachCompany("amazon",12,22,69);
-    amazon.calculate_total_wage();
-
-    }
 }
