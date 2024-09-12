@@ -18,10 +18,9 @@ public class EmpWageBuilder implements EmpWageCalculator {
     public void calculateEmpWage(){
     for(CompanyEmpWage companyEmpWage:empWages) {
         companyEmpWage.calculate_total_wage();
-        companyEmpWage.display_company_wage_details();
+       // companyEmpWage.display_company_wage_details();
     }
     }
-
     public static void main(String[] args) {
 
         EmpWageBuilder emp=new EmpWageBuilder();

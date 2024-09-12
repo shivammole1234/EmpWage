@@ -12,8 +12,7 @@ public class CompanyEmpWage   {
   int working_hrs;
   int working_day;
   int total_working_hr;
-    CompanyEmpWage
-          (String company_name,int wage_per_hr,int max_working_days,int max_working_hrs)
+    CompanyEmpWage(String company_name,int wage_per_hr,int max_working_days,int max_working_hrs)
   {
       this.company_name=company_name;
       this.wage_per_hr=wage_per_hr;
@@ -28,17 +27,19 @@ public class CompanyEmpWage   {
   }
 
     public void display_company_wage_details() {
-        System.out.println("printing the details of company");
+        System.out.println("\nprinting the details of company");
         System.out.println("Company Name :-"+company_name+ "\n Max Working Days :- "
                 +working_day+"\n Max Working hour:- "+max_working_hrs+
                 " \n Wage per Hour:- "+wage_per_hr+" " +"\ntotal working hours:-" +total_working_hr+" \n Total wage of employee :- "
                 +total_wage);
+
+
     }
 
     void calculate_total_wage(){
       System.out.println("calculating the eamployee wage for the specific comoany");
 
-      while (total_working_hr<max_working_hrs && working_day<max_working_days)
+        while (total_working_hr<max_working_hrs && working_day<max_working_days)
       {
           working_day++;
           int emp_type=(int)(Math.random()*100)%3;
@@ -57,6 +58,8 @@ public class CompanyEmpWage   {
           int wage=working_hrs*wage_per_hr;
           total_wage+=wage;
           total_working_hr+=working_hrs;
+
+          System.out.println("the wage for day "+working_day+ " is "+wage);
 
       }
 
