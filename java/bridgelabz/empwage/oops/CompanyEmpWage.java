@@ -27,7 +27,7 @@ public class CompanyEmpWage   {
       display_company_wage_details();
   }
 
-    private void display_company_wage_details() {
+    public void display_company_wage_details() {
         System.out.println("printing the details of company");
         System.out.println("Company Name :-"+company_name+ "\n Max Working Days :- "
                 +working_day+"\n Max Working hour:- "+max_working_hrs+
